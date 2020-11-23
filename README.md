@@ -4,7 +4,9 @@ Just an simple example Greeting API example in golang.
 
 **Request**
 
- ``` curl -X https://greeting-api-golang.herokuapp.com/greeting ```
+ ``` 
+ curl -X https://greeting-api-golang.herokuapp.com/greeting 
+ ```
    
 **Response**
 
