@@ -1,6 +1,10 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"os"
+
+	"github.com/gin-gonic/gin"
+)
 
 func addCORS(c *gin.Context) {
 	c.Header("Access-Control-Allow-Origin", "*")
@@ -14,4 +18,13 @@ func addCORS(c *gin.Context) {
 	}
 
 	c.Next()
+}
+
+func port() string {
+	// heroku variable
+	port := os.Getenv("PORT")
+	if port == "" {
+		return ":8080"
+	}
+	return ":" + port
 }
